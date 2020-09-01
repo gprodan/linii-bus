@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LiniiComponent } from './linii/linii.component';
 import { LinieDetailComponent } from './linie-detail/linie-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
       LiniiComponent,
-      LinieDetailComponent
+      LinieDetailComponent,
+      MessagesComponent
    ],
   imports: [
     BrowserModule,
