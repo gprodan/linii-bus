@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { LiniiComponent } from './linii/linii.component';
 import { LinieDetailComponent } from './linie-detail/linie-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
       LiniiComponent,
       LinieDetailComponent,
-      MessagesComponent
+      MessagesComponent,
+      DashboardComponent
    ],
   imports: [
     BrowserModule,

@@ -10,7 +10,7 @@ import { MessageService } from '../message.service';
   styleUrls: ['./linii.component.css']
 })
 export class LiniiComponent implements OnInit {
-  selectedLinie: Linie;
+
 linii: Linie[];
   constructor(private linieService: LinieService, private messageService: MessageService) { }
 
@@ -19,10 +19,6 @@ linii: Linie[];
   }
 
 
-  onSelect(linie: Linie): void {
-    this.selectedLinie = linie;
-    this.messageService.add(`LiniiComponent: Selected linie id=${linie.id}`);
-  }
 
   getLinii(): void {
     this.linieService.getLinii()
