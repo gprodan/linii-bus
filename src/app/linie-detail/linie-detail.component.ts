@@ -31,5 +31,9 @@ export class LinieDetailComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+  save(): void {
+    this.linieService.updateLinie(this.linie)
+      .subscribe(() => this.goBack());
+  }
 
 }

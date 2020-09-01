@@ -24,5 +24,16 @@ linii: Linie[];
     this.linieService.getLinii()
       .subscribe(linii => this.linii = linii);
   }
-
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.linieService.addLinie({ name } as Linie)
+      .subscribe(linie => {
+        this.linii.push(linie);
+      });
+  }
+  delete(linie: Linie): void {
+    this.linii = this.linii.filter(h => h !== linie);
+    this.linieService.deleteLinie(linie).subscribe();
+  }
 }
