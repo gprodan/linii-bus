@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Linie } from '../linie'
+import { LINII } from '../liniitest'
 
 @Component({
   selector: 'app-linii',
@@ -7,15 +8,15 @@ import { Linie } from '../linie'
   styleUrls: ['./linii.component.css']
 })
 export class LiniiComponent implements OnInit {
-linie: Linie = {
-  id: 1,
-  name: "Linia 1",
-  nrstatii: 3,
-  statii: "st1, st2, st3"
-};
+linii = LINII;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  selectedLinie: Linie;
+  onSelect(linie: Linie): void {
+    this.selectedLinie = linie;
   }
 
 }

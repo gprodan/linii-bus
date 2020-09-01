@@ -1,7 +1,17 @@
-<h2>{{linie.name | uppercase }} Details</h2>
-<div><span>Id: </span>{{linie.id}}</div>
-<div> <label>Nume:
-  <input [(ngModel)]="linie.name" placeholder="name"/>
-</label></div>
-<div><span>Numar statii: </span>{{linie.id}}</div>
-<div><span>Statii: </span>{{linie.name}}</div>
+<h2>Linii</h2>
+<ul class="linii">
+    <li *ngFor="let linie of linii" [class.selected]="linie === selectedLinie" (click)="onSelect(linie)">
+        <span class="badge">{{linie.id}}</span> {{linie.name}}
+    </li>
+</ul>
+
+<div *ngIf="selectedLinie">
+
+    <h2>{{selectedLinie.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{selectedLinie.id}}</div>
+    <div>
+        <label>name:
+    <input [(ngModel)]="selectedLinie.name" placeholder="name"/>
+  </label>
+    </div>
+</div>
