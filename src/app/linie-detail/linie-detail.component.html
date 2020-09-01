@@ -1,0 +1,14 @@
+<div *ngIf="linie">
+
+    <h2>{{linie.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{linie.id}}</div>
+    <div>
+        <label>name:
+      <input [(ngModel)]="linie.name" placeholder="name"/>
+    </label>
+    </div>
+    <div><span>Numar statii: </span>{{linie.nrstatii}}</div>
+    <div><span>Statii: </span>{{linie.statii}}</div>
+    <button (click)="goBack()">go back</button>
+    <button (click)="save()">save</button>
+</div>

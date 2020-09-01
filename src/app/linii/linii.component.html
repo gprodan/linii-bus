@@ -1,0 +1,18 @@
+<h2>Linii</h2>
+<div>
+    <label>Nume linie:
+    <input #linieName />
+  </label>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="add(linieName.value); linieName.value=''">
+    add
+  </button>
+</div>
+<ul class="linii">
+    <li *ngFor="let linie of linii">
+        <a routerLink="/detail/{{linie.id}}">
+            <span class="badge">{{linie.id}}</span> {{linie.name}}
+        </a>
+        <button class="delete" title="delete linie" (click)="delete(linie)">x</button>
+    </li>
+</ul>

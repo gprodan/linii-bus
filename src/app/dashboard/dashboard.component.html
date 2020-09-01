@@ -1,0 +1,10 @@
+<h3>Primele Linii</h3>
+<div class="grid grid-pad">
+    <a *ngFor="let linie of linii" class="col-1-4" routerLink="/detail/{{linie.id}}">
+        <div class="module linie">
+            <h4>{{linie.name}}</h4>
+        </div>
+    </a>
+</div>
+
+<app-linie-search></app-linie-search>
